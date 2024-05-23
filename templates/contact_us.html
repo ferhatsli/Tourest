@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourest - İletişim</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="/">
+        <h1 class="logo">Tourest</h1>
+      </a>
+
+      <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+      </button>
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="/" class="navbar-link">Anasayfa</a>
+          </li>
+
+          <li>
+            <a href="/hakkimizda" class="navbar-link">Hakkımızda</a>
+          </li>
+
+          <li>
+            <a href="/kitalar" class="navbar-link">Kıtalar</a>
+          </li>
+
+          <li>
+            <a href="/blog" class="navbar-link">Blog</a>
+          </li>
+
+          <li>
+            <a href="/iletisim" class="navbar-link">İletişime Geç</a>
+          </li>
+
+        </ul>
+
+        <a href="/kitalar" class="btn btn-secondary">Şimdi Araştır</a>
+
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- 
+    - #MAIN
+  -->
+
+  <main>
+    <section class="section contact">
+      <div class="container">
+
+        <h2 class="h2 section-title">Bize Ulaşın</h2>
+        <p class="section-subtitle">İletişim Formu</p>
+
+        <form action="#" method="post" class="contact-form">
+
+          <div class="input-wrapper">
+            <label for="name" class="form-label">Adınız</label>
+            <input type="text" name="name" id="name" required class="form-input">
+          </div>
+
+          <div class="input-wrapper">
+            <label for="email" class="form-label">Email Adresiniz</label>
+            <input type="email" name="email" id="email" required class="form-input">
+          </div>
+
+          <div class="input-wrapper">
+            <label for="subject" class="form-label">Konu</label>
+            <input type="text" name="subject" id="subject" required class="form-input">
+          </div>
+
+          <div class="input-wrapper">
+            <label for="message" class="form-label">Mesajınız</label>
+            <textarea name="message" id="message" required class="form-input" rows="5"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Gönder</button>
+
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-image: url('{{ url_for('static', filename='assets/images/footer-bg.png') }}')">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Kıtalar</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Asya Kıtası</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Avrupa Kıtası</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Blog</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Sultan Ahmet Camii</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Kolezyum</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Tac Mahal</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Dolmabahçe Sarayı</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Menu</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Hakkımızda</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">İletişime Geç</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Turlar</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Blog</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Bülten alın</p>
+
+          <p class="newsletter-text">
+            En son fırsatlar ve ipuçları için gelen kutunuzdan başka yere gitmeyin
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email" required placeholder="Email address" class="newsletter-input">
+
+            <button type="submit" class="btn btn-primary">Abone Ol</button>
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <a href="#" class="logo">Tourest</a>
+
+        <p class="copyright">
+          &copy; 2022 <a href="#" class="copyright-link">codewithsadee</a>. All Rights Reserved
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-google"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top aria-label="Go To Top">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="{{ url_for('static', filename='assets/js/script.js') }}"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

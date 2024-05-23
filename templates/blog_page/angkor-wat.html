@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tourest - Explore the World</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+      
+        <!-- 
+          - favicon
+        -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg+xml">
+      
+        <!-- 
+          - google font link
+        -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+          <style>
+            .hero {
+              background-repeat: no-repeat, no-repeat;
+              background-position: bottom left, top right;
+              min-height: 240px; /* Orijinal yükseklik yarıya düşürüldü */
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+        
+            .hero-content {
+              margin-bottom: 50px;
+            }
+        
+            .hero .section-subtitle {
+              margin-bottom: 15px;
+            }
+        
+            .hero-title {
+              color: var(--oxford-blue);
+              font-size: var(--fs-1);
+              font-family: var(--ff-abril-fatface);
+              font-weight: var(--fw-500);
+              line-height: 1.2;
+              max-width: 11ch;
+              margin-bottom: 15px;
+            }
+        
+            .hero-text {
+              color: var(--black-coral);
+              font-size: var(--fs-7);
+              line-height: 1.7;
+              margin-bottom: 15px;
+            }
+        
+            .btn-group {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 15px;
+            }
+          </style>
+      
+      </head>
+<body id="top">
+    
+    <header class="header" data-header>
+        <div class="container">
+    
+          <a href="/">
+            <h1 class="logo">Tourest</h1>
+          </a>
+    
+          <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+            <ion-icon name="menu-outline" class="open"></ion-icon>
+            <ion-icon name="close-outline" class="close"></ion-icon>
+          </button>
+    
+          <nav class="navbar">
+    
+            <ul class="navbar-list">
+    
+              <li>
+                <a href="/" class="navbar-link">Anasayfa</a>
+              </li>
+    
+              <li>
+                <a href="/hakkimizda" class="navbar-link">Hakkımızda</a>
+              </li>
+    
+              <li>
+                <a href="/kitalar" class="navbar-link">Kıtalar</a>
+              </li>
+    
+              <li>
+                <a href="/blog" class="navbar-link">Blog</a>
+              </li>
+    
+              <li>
+                <a href="/iletisim" class="navbar-link">İletişime Geç</a>
+              </li>
+    
+            </ul>
+    
+            <a href="/kitalar" class="btn btn-secondary">Şimdi Araştır</a>
+    
+          </nav>
+    
+        </div>
+      </header>
+
+      <main>
+        <article>
+    
+            <!-- 
+              - #BLOG POST HERO
+            -->
+    
+            <section class="section hero" style="background-image: url('{{ url_for('static', filename='assets/images/hero-bg-bottom.png') }}'), url('{{ url_for('static', filename='assets/images/hero-bg-top.png') }}')">
+                <div class="container">
+    
+                    <div class="hero-content">
+    
+                        <p class="section-subtitle">Blog</p>
+    
+                        <h2 class="hero-title">Angkor Wat - Kamboçya'nın İncisi</h2>
+    
+                        <p class="hero-text">
+                            Angkor Wat, Kambocya'nın Siem Reap şehri yakınlarında yer alan büyük bir tapınak kompleksidir.
+                        </p>
+    
+                    </div>
+    
+                </div>
+            </section>
+    
+            <!-- 
+              - #BLOG POST CONTENT
+            -->
+    
+            <section class="section blog-post">
+                <div class="container">
+    
+                    <div class="post-content">
+                        <h1 class="post-title">Angkor Wat'ın Tarihçesi ve Önemi</h1>
+                        <p class="post-meta">
+                            Yazar: <a href="#" class="author-name">John Doe</a> | Yayınlanma Tarihi: Mayıs 1, 2023
+                        </p>
+    
+                        <figure class="post-banner">
+                            <img src="{{ url_for('static', filename='assets/images/angkor-wat-1.jpeg') }}" width="800" height="600" alt="Angkor Wat" class="img-cover">
+                        </figure>
+    
+                        <p class="post-text">
+                            <strong>İnşa Tarihi:</strong> Angkor Wat, 12. yüzyılın ortalarında, Khmer İmparatoru Suryavarman II tarafından inşa edildi. İnşası yaklaşık olarak MS 1113-1150 yılları arasında tamamlandı.
+                        </p>
+    
+                        <figure>
+                            <img src="{{ url_for('static', filename='assets/images/angkor-wat-2.jpeg') }}" width="800" height="600" alt="Angkor Wat İç Mekanı" class="img-cover">
+                            <figcaption>Angkor Wat'ın etkileyici iç mekanlarından biri</figcaption>
+                        </figure>
+    
+                        <p class="post-text">
+                            <strong>Khmer İmparatorluğu Dönemi:</strong> Khmer İmparatorluğu, Angkor Wat'ın inşa edildiği dönemde zirveye ulaştı. Angkor bölgesi, imparatorluğun başkenti olarak hizmet verdi.
+                        </p>
+    
+                        <p class="post-text">
+                            <strong>Mimarlık ve Sanat:</strong> Angkor Wat, etkileyici mimarisi ve detaylı kabartmalarıyla dikkat çeker. Hindu tapınağı olarak inşa edilmiştir ve tanrı Vishnu'ya adanmıştır.
+                        </p>
+    
+                        <figure>
+                            <img src="{{ url_for('static', filename='assets/images/angkor-wat-3.jpeg') }}" width="800" height="600" alt="Angkor Wat Kabartmaları" class="img-cover">
+                            <figcaption>Angkor Wat'ın detaylı kabartmaları</figcaption>
+                        </figure>
+    
+                        <p class="post-text">
+                            <strong>Hindu-Kamboçya ve Budist Dönemler:</strong> İlk olarak Hindu tapınağı olarak kullanılan Angkor Wat, zamanla Budist tapınağına dönüştü. Bu, Kambocya'nın Hindu ve Budist kültürlerini yansıtan benzersiz bir özelliktir.
+                        </p>
+    
+                        <p class="post-text">
+                            <strong>Angkor İmparatorluğu'nun Merkezi:</strong> Angkor Wat, Angkor İmparatorluğu'nun merkezi olarak işlev gördü. İmparatorluk, güçlü bir su mühendisliği sistemi sayesinde tarım ve su yönetiminde ileri bir seviyeye ulaştı.
+                        </p>
+    
+                        <figure>
+                            <img src="{{ url_for('static', filename='assets/images/angkor-wat-4.jpeg') }}" width="800" height="600" alt="Angkor Wat Merkezi" class="img-cover">
+                            <figcaption>Angkor Wat'ın merkezi bölgesi</figcaption>
+                        </figure>
+    
+                        <p class="post-text">
+                            <strong>Fransız Keşfi ve Restorasyon Çalışmaları:</strong> Angkor Wat, 19. yüzyılda Fransız kâşif Henri Mouhot tarafından Batılı dünyaya tanıtıldı. Daha sonra 20. yüzyılın ortalarında restorasyon çalışmalarına tabi tutuldu.
+                        </p>
+    
+                        <p class="post-text">
+                            <strong>UNESCO Dünya Mirası:</strong> Angkor Wat ve çevresindeki Angkor tapınakları, 1992 yılında UNESCO tarafından Dünya Mirası olarak ilan edildi. Bu bölge, benzersiz tarihi, kültürel ve arkeolojik değeri nedeniyle koruma altına alındı.
+                        </p>
+    
+                        <p class="post-text">
+                            <strong>Turistik Bir Çekim Noktası:</strong> Angkor Wat, günümüzde Kambocya'nın en önemli turistik mekanlarından biridir. Ziyaretçilere, etkileyici mimarisi ve tarihi atmosferiyle benzersiz bir deneyim sunar.
+                        </p>
+    
+                        <figure>
+                            <img src="{{ url_for('static', filename='assets/images/angkor-wat-5.jpeg') }}" width="800" height="600" alt="Angkor Wat Turistik" class="img-cover">
+                            <figcaption>Angkor Wat, Kamboçya'nın en önemli tur istik mekanlarından biri </figcaption>
+                        </figure>
+                        
+                        <p class="post-text">
+                            Angkor Wat, dünya çapında tanınan bir simge olarak sadece Kambocya'nın değil, dünya tarih ve kültürü üzerinde de derin bir etki bırakmış önemli bir yapıdır.
+                        </p>
+                    </div>
+    
+                </div>
+            </section>
+    
+        </article>
+    </main>
+    
+    <footer class="footer" style="background-image: url('{{ url_for('static', filename='assets/images/footer-bg.png') }}')">
+        <div class="container">
+    
+          <div class="footer-top">
+    
+            <ul class="footer-list">
+    
+              <li>
+                <p class="footer-list-title">Kıtalar</p>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Asya Kıtası</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Avrupa Kıtası</a>
+              </li>
+    
+    
+            </ul>
+    
+            <ul class="footer-list">
+    
+              <li>
+                <p class="footer-list-title">Blog</p>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Sultan Ahmet Camii</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Kolezyum</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Tac Mahal</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Dolmabahçe Sarayı</a>
+              </li>
+    
+    
+            </ul>
+    
+            <ul class="footer-list">
+    
+              <li>
+                <p class="footer-list-title">Menu</p>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Hakkımızda</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">İletişime Geç</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Turlar</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Blog</a>
+              </li>
+    
+              
+    
+            </ul>
+    
+            <div class="footer-list">
+    
+              <p class="footer-list-title">Bülten alın</p>
+    
+              <p class="newsletter-text">
+                En son fırsatlar ve ipuçları için gelen kutunuzdan başka yere gitmeyin
+              </p>
+    
+              <form action="" class="newsletter-form">
+                <input type="email" name="email" required placeholder="Email address" class="newsletter-input">
+    
+                <button type="submit" class="btn btn-primary">Abone Ol</button>
+              </form>
+    
+            </div>
+    
+          </div>
+    
+          <div class="footer-bottom">
+    
+            <a href="#" class="logo">Tourest</a>
+    
+            <p class="copyright">
+              &copy; 2022 <a href="#" class="copyright-link">codewithsadee</a>. All Rights Reserved
+            </p>
+    
+            <ul class="social-list">
+    
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-google"></ion-icon>
+                </a>
+              </li>
+    
+            </ul>
+    
+          </div>
+    
+        </div>
+      </footer>
+    
+      <!-- 
+        - #GO TO TOP
+      -->
+    
+      <a href="#top" class="go-top" data-go-top aria-label="Go To Top">
+        <ion-icon name="chevron-up-outline"></ion-icon>
+      </a>
+    
+      <!-- 
+        - custom js link
+      -->
+      <script src="{{ url_for('static', filename='assets/js/script.js') }}"></script>
+    
+      <!-- 
+        - ionicon link
+      -->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    </body>
+    </html>
+    ```
+    
